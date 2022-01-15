@@ -1,0 +1,75 @@
+<DOCTYPE html!>
+    <html>
+
+    <head>
+        <title>Factorial Number</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: rgb(255, 204, 204);
+            }
+
+            div {
+                text-align: center;
+                padding-top: 10rem;
+            }
+
+            input {
+                width: 300px;
+                height: 100px;
+                text-align: center;
+                border: 2px solid blueviolet;
+
+            }
+
+            button {
+                border: 2px solid rgb(0, 0, 0);
+                background-color: cadetblue;
+                color: cornsilk;
+                padding: 5px;
+                font-weight: bolder;
+                font-size: 1rem;
+            }
+
+            button:hover {
+                background-color: rgb(10, 10, 10);
+                color: rgb(121, 202, 29)
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <input type="number" id="b1" placeholder="Enter positive number to check Factorial" /><br><br>
+            <button onclick='Facto()'>CLICK HERE TO CHECK FACTORIAL</button>
+            <p></p>
+        </div>
+        <script>
+//Now here we are writing javascript program
+
+            function Factorial(num) {
+
+
+                if (num == 0) return 1;
+                else
+                    return num * Factorial(num - 1);
+            }
+
+            function Facto() {
+                var num1 = document.getElementById("b1").value;
+
+                if (num1 == "")
+
+                    alert("Please Enter any number");
+                else if (num1 >= 0) {
+
+                    const Final = Factorial(num1);
+                    document.querySelector("p").innerText = Final;
+                }
+            }
+
+        </script>
+    </body>
+
+    </html>
